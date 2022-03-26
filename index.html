@@ -1,3 +1,4 @@
+<!-- Sorces: https://mdbootstrap.com/snippets/jquery/ascensus/145756#html-tab-view -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,5 +9,73 @@
     <meta name="author" content="Divya Kumaran,Crystal Ho, and Angelo Bechtold">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
+<body>
+    <div class="container">
+        <div>
+            <canvas id="pieChart" style="max-width: 650px;"></canvas>
+        </div>
+        <div >
+            <h3>Suggestions</h3>
+            <div class="card">
+                <div class="card-header">
+                  You visited Starbucks 16 times this month, totaling $96.00
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">If you can cut out 4 trips next month, or 1 trip per week, you'd save $24 -> this adds up to $288 per year!</h5>
+                  <p class="card-text">Set limit of how much you should spend at Starbucks for this month</p>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  </div>
+                  <a href="#" class="btn btn-primary">Set limit</a>
+                </div>
+              </div>
+            <div class="card">
+            <div class="card-header">
+                You're subscribed to Netflix, Hulu, and Hbo
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Cut out one of these, and you'd save around $120 per year!</h5>
+                <p class="card-text">Set limit of how much you should spend on Streaming Services for this month</p>
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                </div>
+                <a href="#" class="btn btn-primary">Set limit</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script> 
+    var ctxP = document.getElementById("pieChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+      type: 'pie',
+      data: {
+        labels: ["Food & Drink", "Streaming Services", "Entertainment Tickets"],
+        datasets: [{
+          data: [300, 50, 100],
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870"]
+        }]
+      },
+      options: {
+        title:{
+            display:true,
+            text:"YOUR MONTHLY SPENDING BREAKDOWN"
+        },
+        responsive: true,
+        hover: {mode: null},
+        
+      }
+    });</script>
 </html>
