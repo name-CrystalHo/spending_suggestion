@@ -46,14 +46,14 @@
               </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Try searching for 'coffee'..." aria-label="Go">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search captialone.com" aria-label="Go">
             <button class="btn btn-outline-failure my-2 my-sm-0" style="color: white; background-color: #cc2427" type="submit">Go</button>
           </form>
         </div>
     </nav>
     <div class="container">
         <div class="pieChart">
-            <canvas id="pieChart" style="max-width: 1200px;"></canvas>
+            <canvas id="pieChart" style="max-width: 1000px;"></canvas>
         </div>
         <div> 
             <div>
@@ -61,25 +61,20 @@
                 <h3>Suggestions</h3>
             </div>
             <div class="card">
-                <div class="card-header" style="background-color: #6290AC">
+                <div class="card-header">
                   You visited Starbucks <b>16</b> times this month, totaling <b>$96.00</b>.
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">If you can cut out <b>4</b> trips next month, or <b>1</b> trip per week, you'd save <b>$24</b> -> this adds up to <b>$288</b> per year!</h5>
-                  <p class="card-text">Set limit of how much you should spend at <a href="http://www.example.com">Starbucks</a> for this month</p>
+                  <h5 class="card-title">If you can cut out <b>4</b> trips next month, or <b>1</b> trip per week, you'd save <b>$24.</b> <br> This adds up to <b>$288</b> per year!</h5>
+                  <p class="card-text">Set limit of how much you should spend at Starbucks for this month</p>
                     <div class="row">
-                        <div class="input-group-prepend col-md-6 mb-3">
-                            <span class="input-group-text">Min $</span>
-                            <input type="text" class="form-control" id="min" placeholder="" value="" required="">
-                        </div>
                         <div class="col-md-6 mb-3 input-group-prepend">
-                            <span class="input-group-text">Max $</span>
-                            <input type="text" class="form-control" id="max" placeholder="" value="" required="">
+                            <input type="text" class="form-control" id="max" placeholder="Max Amount" value="" required="">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Set
+                            </button>
                         </div>
                     </div>
-                  <button type="button" class="btn btn-primary" style="float: right; color: white; background-color: #cc2427" data-toggle="modal" data-target="#exampleModal">
-                   Set Limit
-                  </button>
                   <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -103,23 +98,18 @@
                 </div>
               </div>
             <div class="card">
-            <div class="card-header" style="background-color: #6290AC">
+            <div class="card-header">
                 You're subscribed to Netflix, Hulu, and HBO.
             </div>
             <div class="card-body">
                 <h5 class="card-title">Cut out one of these, and you'd save around <b>$120</b> per year!</h5>
-                <p class="card-text">Set limit of how much you should spend on <a href="http://www.example.com">Streaming Services</a> for this month</p>
+                <p class="card-text">Set limit of how much you should spend on Streaming Services for this month</p>
                 <div class="row">
-                    <div class="input-group-prepend col-md-6 mb-3">
-                        <span class="input-group-text">Min $</span>
-                        <input type="text" class="form-control" id="min" placeholder="" value="" required="">
-                    </div>
                     <div class="col-md-6 mb-3 input-group-prepend">
-                        <span class="input-group-text">Max $</span>
-                        <input type="text" class="form-control" id="max" placeholder="" value="" required="">>
+                        <input type="text" class="form-control" id="max" placeholder="Max Amount" value="" required="">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Set</button>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary" style="float: right; color: white; background-color: #cc2427">Set Limit</a>
             </div>
             </div>
         </div>
@@ -140,7 +130,8 @@
       options: {
         title:{
             display:true,
-            text:"YOUR MONTHLY SPENDING"
+            text:"YOUR MONTHLY SPENDING",
+            fontSize:30,
         },
         responsive: true,
         hover: {mode: null},
