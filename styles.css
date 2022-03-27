@@ -1,0 +1,41 @@
+html,body{
+    font-family: Optimist,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.lightbulb{
+    height:4%;
+    width:4%;
+}
+.navbar{
+    background-color: white !important;
+    border-bottom-style: ridge;
+}
+.headertitle{
+    text-align: left;
+}
+.fa-solid fa-lightbulb{
+    width: 10px;
+    height: 10px;
+}
+.responsive {
+    width: 10%;
+    height: 10%;
+  }
+
+.navbar-nav mr-auto{
+    margin-left: 1%;
+}
+.container {
+   margin-right: auto;
+   margin-left: auto;
+    text-align: center;
+    justify-content: center;
+}
+.pieChart{
+    margin-bottom: 3%;
+    justify-content: center;
+}
+#pieChart
+{
+    display: block;
+    margin: 0 auto;
+}
