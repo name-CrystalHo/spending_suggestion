@@ -1,4 +1,4 @@
-<!-- Sorces: https://mdbootstrap.com/snippets/jquery/ascensus/145756#html-tab-view -->
+﻿<!-- Sorces: https://mdbootstrap.com/snippets/jquery/ascensus/145756#html-tab-view -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finance Chart</title>
     <meta name="description" content="Simple Finance Chart">
-    <meta name="author" content="Divya Kumaran,Crystal Ho, and Angelo Bechtold">
+    <meta name="author" content="Divya Kumaran, Crystal Ho, and Angelo Bechtold">
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="script.js"></script>
@@ -46,14 +46,14 @@
               </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="Try searching for 'coffee'..." aria-label="Go">
+            <button class="btn btn-outline-success my-2 my-sm-0" style="color: white; background-color: #255f82" type="submit">Go</button>
           </form>
         </div>
     </nav>
     <div class="container">
         <div class="pieChart">
-            <canvas id="pieChart" style="max-width: 800px;"></canvas>
+            <canvas id="pieChart" style="max-width: 1200px;"></canvas>
         </div>
         <div> 
             <div>
@@ -61,7 +61,7 @@
                 <h3>Suggestions</h3>
             </div>
             <div class="card">
-                <div class="card-header">
+                <div class="card-header" style="background-color: #6290AC">
                   You visited Starbucks 16 times this month, totaling $96.00
                 </div>
                 <div class="card-body">
@@ -73,7 +73,7 @@
                     </div>
                     <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                   </div>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  <button type="button" class="btn btn-primary" style="float: right; color: white; background-color: #cc2427" data-toggle="modal" data-target="#exampleModal">
                    Set Limit
                   </button>
                   <!-- Modal -->
@@ -99,8 +99,8 @@
                 </div>
               </div>
             <div class="card">
-            <div class="card-header">
-                You're subscribed to Netflix, Hulu, and Hbo
+            <div class="card-header" style="background-color: #6290AC">
+                You're subscribed to Netflix, Hulu, and HBO
             </div>
             <div class="card-body">
                 <h5 class="card-title">Cut out one of these, and you'd save around $120 per year!</h5>
@@ -109,9 +109,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input type="text" class="form-control"  aria-label="Amount (to the nearest dollar)">
                 </div>
-                <a href="#" class="btn btn-primary">Set limit</a>
+                <a href="#" class="btn btn-primary" style="float: right; color: white; background-color: #cc2427">Set Limit</a>
             </div>
             </div>
         </div>
